@@ -522,6 +522,10 @@ img {
 	cursor: pointer;
 }
 
+.footer-banner-image {
+	max-width: 47%;
+}
+
 .quantity-desc .minus {
 	border-right: 1px solid gray;
 	font-size: 20px;

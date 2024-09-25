@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { urlFor } from '../utils/client';
 
 const HeroBanner = ({ smallText, midText, lgText, image, description }) => {
   return (
@@ -9,7 +10,7 @@ const HeroBanner = ({ smallText, midText, lgText, image, description }) => {
           <h3>{midText}</h3>
           <h1>{lgText}</h1>
           {
-            image && <img src={image} alt="hero banner" className='hero-banner-image'/>
+            image && <img src={urlFor(image)} alt="hero banner" className='hero-banner-image'/>
           }
           <Link><button className='btn'>Shop Now</button></Link>
           <div className="desc">

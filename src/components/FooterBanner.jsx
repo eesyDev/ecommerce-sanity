@@ -1,8 +1,30 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { urlFor } from '../utils/client';
 
-const FooterBanner = () => {
+const FooterBanner = ({footerBanner : {discount, largeText, largeText2, saleTime, smallText, midText, descr, product, buttonText, image}}) => {
   return (
-    <div>FooterBanner</div>
+    <div className='footer-banner-container'>
+      <div className="banner-desc">
+        <div className="left">
+          <p>{discount && discount}</p>
+          <h3>{largeText}</h3>
+          <h3>{largeText2}</h3>
+          <p>{saleTime}</p>
+        </div>
+        <div className="right">
+          <p>{smallText}</p>
+          <h3>{midText}</h3>
+          <p>{descr}</p>
+          <Link>
+            <button>{buttonText}</button>
+          </Link>
+        </div>
+        {
+          image && <img src={urlFor(image)} className='footer-banner-image'/>
+        }
+      </div>
+    </div>
   )
 }
 
